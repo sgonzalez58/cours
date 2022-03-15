@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Jadoo : un voyage culinaire gourmet et gourmand</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+    <header class="left-pad">
+        <div id="logo">
+            <img id="img-logo" src="img/logo_jadoo_1.svg" height="30px" alt="logo1">
+            <img id="text-logo" src="img/logo_jadoo_2.svg" height="30px" alt="logo2">
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Les Nouveautés</a></li>
+                    <li><a href="#">Découvrir</a></li>
+                    <li><a href="#">Commander</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!--corps-->
+
+    <section id="partie_presentation" class="left-pad">
+        <p class="slogan saumon">Un voyage culinaire gourmet et gourmand.</p>
+
+        <h2>Bienvenue <br> au restaurant <br><span class="souligne">Jadoo &emsp;&emsp;</span></h2>
+
+        <p class="presentation gris">Jadoo vous accueille dans son ambiance zen et épurée, idéale pour découvrir ou
+            redécouvrir
+            la
+            cuisine gastronomique du Chef Junichi Ilda.
+        </p>
+        <a href="#">
+            <button class="lien_carte" type="button">Découvrir la carte</button>
+        </a>
+        <!--bouton-->
+    </section>
+    <section id="nouveautes" class="middle">
+        <p class="gris" >Découvrez</p>
+        <h3>Les nouveautés Jadoo</h3>
+
+        <div id="plats">
+            <figure>
+                <img src="img/plat_1.png" alt="boulettes de poulet">
+                <figcaption>Boulettes de poulet au<br>gimgembre sauce sucrée<br>salée "Tsukuné"</figcaption>
+            </figure>
+            <figure>
+                <img src="img/plat_2.png" alt="nouilles japonaises">
+                <figcaption>Nouilles japonaises<br>chaudes à base de farine<br>de blé "Udon"</figcaption>
+            </figure>
+            <figure>
+                <img src="img/plat_3.png" alt="Echine de porc">
+                <figcaption>Echine de porc panée à la<br>japonaise "Tonkatsu-<br>Teishoku</figcaption>
+            </figure>
+        </div>
+        <div id="maki">
+            <figure>
+                <img src="img/maki_1.png" alt="maki california tobiko">
+                <figcaption><span>California Tobiko</span><br>Saumon, thon,<br>mayonnaise</figcaption>
+            </figure>
+            <figure>
+                <img src="img/maki_2.png" alt="maki california rolls">
+                <figcaption><span>California Rolls</span><br>Saumon, avocat et<br>mayonnaise</figcaption>
+            </figure>
+            <figure>
+                <img src="img/maki_3.png" alt="maki ebi">
+                <figcaption><span>Ebi</span><br>Crevette, avocat,<br>menthe, coriandre</figcaption>
+            </figure>
+            <figure>
+                <img src="img/maki_4.png" alt="maki ikura rolls">
+                <figcaption><span>Ikura Rolls</span><br>Oeufs de saumon</figcaption>
+            </figure>
+        </div>
+        <a href="#">
+            <button class="lien_carte" type="button">Découvrir la carte</button>
+        </a>
+        <!--bouton-->
+    </section>
+    <section>
+        <div id="chef" class="left-pad">
+            <video poster="./img/visu_video.jpg">
+                <source src="#">
+                <img src="img/button_play.svg" alt="bouton play">
+            </video>
+            <h2>Un voyage gastronomique entre le Japon et la France</h2>
+            <p>Passé par des maisons étoilées en France, le cuisinier japonais s'est forgé une solide expérience dans
+                l'Hexagone
+                : aujourd'hui franc-comtois d'adoption, il tisse chaque jour au sein de son restaurant gastronomique
+                japonais à
+                Paris
+            </p>
+        </div>
+        <div id="commander">
+            <p class="presentation">Rapide et pratique</p>
+            <h4><span class="saumon">Commandez</span> <br> sur le site Jadoo</h4>
+            <dl>
+                <dt>
+                    UberEats
+                </dt>
+                <dd>
+                    Commandez tous vos plats depuis UberEats
+                </dd>
+                <dt>
+                    Jadoo.fr
+                </dt>
+                <dd>
+                    Ou commandez en ligne sur le site officiel de <span class="nom">Jadoo</span>
+                <dt>
+                    Livraison ultra Rapide
+                </dt>
+                <dd>
+                    Soyez livrez en 20 minutes maximum
+                </dd>
+            </dl>
+
+            Découvrir la carte
+            <!--bouton-->
+        </div>
+    </section>
+
+
+    <section id="prendre_rdv">
+        <p class="presentation middle">Prendre rendez-vous</p>
+        <h3 class="middle">Contactez-nous <br> pour réserver au restaurant</h3>
+        <div id="fiche_de_contact">
+            <form id="formulaire" method="post" action="form.php">
+                <h5>Formulaire de contact</h5>
+                <p class="exemple">Remplissez le formulaire ci-dessous<br>pour nous contacter</p>
+                <div id="identite" class>
+                    <div>
+                        <label for="nom">Nom</label><br>
+                        <input type="text" id="nom" name="nom" placeholder="DRABCZYNSKI" minlength="2" maxlength="30"
+                            requiared>
+                    </div>
+                    <div>
+                        <label for="prenom">Prénom</label><br>
+                        <input type="text" id="prenom" name="prenom" placeholder="Alan" minlength="2" maxlength="30"
+                            required>
+                    </div>
+                </div>
+                <div>
+                    <label for="mail">Adresse e-mail</label><br>
+                    <input type="email" id="mail" name="mail" placeholder="alan.drabczynski@gmail.com" required>
+                </div>
+                <div>
+                    <label for="message">Message</label><br>
+                    <input type="text" id="message" name="message" placeholder="Ecrivez votre message ici"
+                        maxlength="500" required>
+                </div>
+                <br>
+                <br>
+                <div class="middle">
+                    <input type="submit" value="Envoyer">
+                    </input>
+                </div>
+            </form>
+            <img id="photo_formulaire" src="img/illustration_formulaire.jpg" alt="Plat de sushi appétisant">
+
+        </div>
+    </section>
+    <footer>
+        <section>
+            <h1>Jadoo</h1>
+            <p class="sous_menu">Un voyage gastronomique entre le Japon et la France</p>
+        </section>
+        <section>
+            <a href="">Restaurant</a>
+            <a href="" class="sous_menu">Nouveautés</a>
+            <a href="" class="sous_menu">Découvrir</a>
+            <a href="" class="sous_menu">Commander</a>
+            <a href="">Contact</a>
+            <a href="" class="sous_menu">Prendez RDV</a>
+        </section>
+        <section>
+            <h6>Uber Eats</h6>
+            <a href="" class="sous_menu">Téléchargez UberEats</a>
+        </section>
+        <section>
+            <p id="fin">Tout droits réservés @jadoo.co</p>
+        </section>
+    </footer>
+</body>
+
+</html>

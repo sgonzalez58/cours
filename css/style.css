@@ -1,0 +1,282 @@
+body{
+    font-family: "open_sans";
+    margin : 0 0;
+    vertical-align: top;
+    font-size: 16px;
+}
+a{
+    text-decoration:none;
+}
+.middle{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.left-pad{
+    padding-left: 8%;
+}
+
+header{
+    display:flex;
+    position:sticky;
+    top:0;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#img-logo{
+    margin :20px auto 15px;
+}
+#text-logo{
+    margin : 20px 15px 15px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin : auto;    
+    display: flex;
+    flex-wrap: nowrap;
+}
+nav li{
+    float:left;
+    margin: 0 15px;
+    text-align:center;
+}
+nav{
+    margin-right: 150px;
+}
+nav a{
+    display:block;
+    color:black;
+    width: max-content;
+    font-weight: 400;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav ul::after{
+    content:"";
+    display: table;
+    clear:both;
+}
+
+section{
+    padding-top: 15px;
+}
+#partie_presentation{
+    background-image: url("../img/illustration_principale.jpg");
+    height:800px;
+    background-size: 150%;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+h1{
+    font-weight: bold;
+    font-family: "poppins";
+}
+
+.slogan{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 85px;
+}
+.saumon{
+    color:salmon;
+}
+h2{
+    font-size:5em;
+    color: white;
+    font-family: "volkhov";
+    margin: 40px auto;
+}
+.nom{
+    font-family:"poppins";
+}
+.presentation{
+    font-family: "poppins";
+    width : 480px;
+    line-height: 2em;
+    font-weight: bold;
+}
+.gris{
+    color:gray;
+}
+
+.lien_carte{
+    border : 1px solid rgb(218, 163, 11);
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 2.5;
+    padding: 2px 20px;
+    text-align: center;
+    text-shadow: 0 0 2px white;
+    background-color: rgb(218, 163, 11);
+    color : white;
+}
+#nouveautes{
+    height:1400px;
+}
+#nouveautes p{
+    font-size: 18px;
+    margin-top: 110px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+h3,h4{
+    font-family:"volkhov";
+    font-weight: bold;
+    font-size: 3em;
+    color:rgb(5, 5, 37);
+    margin:0;
+}
+
+.souligne{
+    background-image: url("../img/souligne_rose.svg");
+    background-position: bottom 10px left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#plats{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px auto;
+    max-width: 950px;
+}
+figure{
+    border-radius: 20px;
+    box-shadow: 0 0 5px 15px rgb(243, 243, 243);
+    margin: 20px;
+    overflow: hidden;    
+    background-color: rgb(241, 241, 241);
+}
+#plats img{
+    width : 280px;
+}
+figcaption{
+    color: gray;
+    font-size: 18px;
+    line-height: 1.5;
+    margin : 20px 0;
+}
+#maki{    
+    display: flex;
+    justify-content: space-evenly;
+    margin: 110px auto;
+    max-width: 1050px;
+    overflow: visible;
+}
+
+#maki figure{
+    width:25%;
+    margin : 1px;
+}
+#maki figcaption span{
+    color:rgb(5, 5, 37);
+    font-weight: bold;
+    line-height: 4em;
+}
+
+#maki figure:hover{
+    box-shadow: 0 0 10px 20px rgb(224, 224, 255);
+}
+
+
+#chef{
+    height:1600px;
+    background-image: url("../img/illustration_chef.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#chef video{
+    margin : 100px 0;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 360px;
+    background-image: url("../img/button_play.svg");
+    background-position: center;
+    background-size: 30% auto;
+}
+
+#commander{
+    height:1200px;
+    background-image: url("../img/illustration_commander.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+dt{
+    font-weight: bold;
+}
+dd{
+    color:grey;
+}
+h5{
+    font-size: 1.2em;
+    margin:0.5em 0;
+}
+.exemple{
+    color:grey;
+}
+.sous_menu{
+    color: gray;
+    font-weight: normal;
+}
+#fiche_de_contact{
+    width:65%;
+    height: 550px;
+    display:flex;
+    border-radius: 40px;
+    box-shadow: 0 0 1px grey;
+    margin:0 auto;
+    max-width: 1045px;
+}
+#formulaire{
+    padding:50px;
+    width: 50%;
+    box-sizing: border-box;  
+    flex-wrap: nowrap;
+}
+
+input{
+    border-width:0 0 1px 0;
+    margin-bottom : 30px;
+}
+
+input[type="submit"]{
+    border:1px;
+    border-color:rgb(34, 139, 224);
+    background-color: rgb(34, 139, 224);
+    color:white;
+    padding:15px 20px 15px 50px;
+    border-radius:10px;
+    background-image: url("../img/bouton_formulaire_coche.svg");
+    background-repeat: no-repeat;
+    background-position: center left 15px;
+}
+
+#identite{
+    display: flex;
+    justify-content: space-between;
+}
+form div div{
+    width:45%;
+}
+
+div{
+    overflow: hidden;    
+}
+
+#message, #mail, #identite{
+    width:100%;
+}
