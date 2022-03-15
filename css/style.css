@@ -65,9 +65,7 @@ nav ul::after{
     clear:both;
 }
 
-section{
-    padding-top: 15px;
-}
+
 #partie_presentation{
     background-image: url("../img/illustration_principale.jpg");
     height:800px;
@@ -75,6 +73,7 @@ section{
     background-position: center 40%;
     background-repeat: no-repeat;
     background-origin: border-box;
+    padding-top: 15px;
 }
 h1{
     font-weight: bold;
@@ -94,7 +93,8 @@ h2{
     font-size:5em;
     color: white;
     font-family: "volkhov";
-    margin: 40px auto;
+    margin: 40px 0;
+    line-height: 1.3em;
 }
 .nom{
     font-family:"poppins";
@@ -150,7 +150,7 @@ h3,h4{
     margin: 40px auto;
     max-width: 950px;
 }
-figure{
+#plats figure{
     border-radius: 20px;
     box-shadow: 0 0 5px 15px rgb(243, 243, 243);
     margin: 20px;
@@ -190,47 +190,95 @@ figcaption{
 
 
 #chef{
-    height:1600px;
-    background-image: url("../img/illustration_chef.jpg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+    height:2800px;
+    background-image: url("../img/illustration_chef.jpg"), url("../img/illustration_commander.jpg");
+    background-size: auto 1600px, auto 1200px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    overflow: visible;
 }
 
-#chef video{
-    margin : 100px 0;
+.marg-left{
+    margin-left: 8%;
+}
+
+#video_presentation{
+    padding : 120px 0;
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chef video{    
     border-radius: 30px;
-    overflow: hidden;
-    width: 360px;
-    background-image: url("../img/button_play.svg");
-    background-position: center;
-    background-size: 30% auto;
+    width : 360px;
 }
 
-#commander{
-    height:1200px;
-    background-image: url("../img/illustration_commander.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+#play{
+    width : 100px;
+    border-radius: 50%;
+    background-color:white;
+    position: absolute;
+    padding: 3px;
 }
 
+#chef h2{
+    width:600px;
+}
+#histoire{
+    width: 400px;
+    line-height: 2em;
+    color: white;
+    font-family: "poppins";
+    margin-bottom: 200px;
+    margin-left: 8%;
+}
 
-dt{
+.float_left{
+    float : left;
+}
+.lancement{
+    text-transform: uppercase;
+    font-size: 20px;  
+    font-weight: bold;
+    clear:both;
+    padding-top: 120px;
+}
+
+.logo{
+    height: 70px;
+    padding-right: 30px;
+}
+
+#commandes_idees{
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    padding : 40px 0;
+    align-items: center;
+}
+
+#commandes_idees a{
+    width: 100%;
+}
+
+#commandes_idees p{
+    font-size: 18px;
+    display: inline-block;  
+}
+#commandes_idees span{
+    color:rgb(5, 5, 37);
     font-weight: bold;
 }
-dd{
-    color:grey;
-}
+
 h5{
     font-size: 1.2em;
     margin:0.5em 0;
+    font-weight:bold;
 }
 .exemple{
     color:grey;
-}
-.sous_menu{
-    color: gray;
-    font-weight: normal;
 }
 #fiche_de_contact{
     width:65%;
@@ -238,8 +286,9 @@ h5{
     display:flex;
     border-radius: 40px;
     box-shadow: 0 0 1px grey;
-    margin:0 auto;
+    margin:40px auto;
     max-width: 1045px;
+    margin-bottom: 120px;
 }
 #formulaire{
     padding:50px;
@@ -263,6 +312,7 @@ input[type="submit"]{
     background-image: url("../img/bouton_formulaire_coche.svg");
     background-repeat: no-repeat;
     background-position: center left 15px;
+    font-size: 18px;
 }
 
 #identite{
@@ -279,4 +329,10 @@ div{
 
 #message, #mail, #identite{
     width:100%;
+}
+
+footer{
+    background-color: rgb(171, 198, 247);
+    padding-top: 100px;
+    display: flex;
 }

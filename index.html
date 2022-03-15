@@ -14,14 +14,14 @@
             <img id="img-logo" src="img/logo_jadoo_1.svg" height="30px" alt="logo1">
             <img id="text-logo" src="img/logo_jadoo_2.svg" height="30px" alt="logo2">
         </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Les Nouveautés</a></li>
-                    <li><a href="#">Découvrir</a></li>
-                    <li><a href="#">Commander</a></li>
-                    <li><a href="#">Contactez-nous</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="#">Les Nouveautés</a></li>
+                <li><a href="#">Découvrir</a></li>
+                <li><a href="#">Commander</a></li>
+                <li><a href="#">Contactez-nous</a></li>
+            </ul>
+        </nav>
     </header>
     <!--corps-->
 
@@ -41,7 +41,7 @@
         <!--bouton-->
     </section>
     <section id="nouveautes" class="middle">
-        <p class="gris" >Découvrez</p>
+        <p class="gris">Découvrez</p>
         <h3>Les nouveautés Jadoo</h3>
 
         <div id="plats">
@@ -81,51 +81,49 @@
         </a>
         <!--bouton-->
     </section>
-    <section>
-        <div id="chef" class="left-pad">
+    <section id="chef">
+        <div id="video_presentation" class="marg-left">
             <video poster="./img/visu_video.jpg">
                 <source src="#">
-                <img src="img/button_play.svg" alt="bouton play">
             </video>
-            <h2>Un voyage gastronomique entre le Japon et la France</h2>
-            <p>Passé par des maisons étoilées en France, le cuisinier japonais s'est forgé une solide expérience dans
-                l'Hexagone
-                : aujourd'hui franc-comtois d'adoption, il tisse chaque jour au sein de son restaurant gastronomique
-                japonais à
-                Paris
-            </p>
+            <img id="play" src="img/button_play.svg" alt="bouton play">
         </div>
-        <div id="commander">
-            <p class="presentation">Rapide et pratique</p>
-            <h4><span class="saumon">Commandez</span> <br> sur le site Jadoo</h4>
-            <dl>
-                <dt>
-                    UberEats
-                </dt>
-                <dd>
-                    Commandez tous vos plats depuis UberEats
-                </dd>
-                <dt>
-                    Jadoo.fr
-                </dt>
-                <dd>
-                    Ou commandez en ligne sur le site officiel de <span class="nom">Jadoo</span>
-                <dt>
-                    Livraison ultra Rapide
-                </dt>
-                <dd>
-                    Soyez livrez en 20 minutes maximum
-                </dd>
-            </dl>
+        <h2 class="marg-left"><span class="souligne">Un voyage</span> gastronomique entre le Japon et la France</h2>
+        <p id="histoire" class="marg-left">Passé par des maisons étoilées en France, le cuisinier japonais s'est forgé
+            une solide expérience dans
+            l'Hexagone
+            : aujourd'hui franc-comtois d'adoption, il maîtrise chaque jour au sein de son restaurant gastronomique
+            japonais à
+            Paris
+        </p>
+        <img class="float_left" src="./img/wrapper_illustration_1.jpg" alt="baguettes">
+        <img class="float_left" src="./img/wrapper_illustration_2.jpg" alt="salle à manger">
 
-            Découvrir la carte
-            <!--bouton-->
+        <p class="lancement marg-left gris">Rapide et pratique</p>
+        <h4 class="marg-left"><span class="saumon">Commandez</span> <br> sur le site Jadoo</h4>
+        <div class="marg-left" id="commandes_idees">
+        <a href="#">
+                <img class="logo" src="./img/logo_uberEats.png" alt="logo uber eat">
+                <p><span>UberEats</span><br>Commandez tous vos plats<br> depuis UberEats</p>
+            
+        </a>
+        <a href="#">
+                <img class="logo" src="./img/logo_jadoo_1.svg" alt="logo jadoo">
+                <p><span>Jadoo.fr</span><br>Ou commandez en ligne<br>sur le site Officiel de Jadoo</p>
+            
+        </a>
+            <img class="logo" src="./img/logo_transport.png" alt="logo transport">
+            <p><span>Livraison ultra rapide</span><br>Soyez livrez en 20 minutes maximum</p>
         </div>
+        <a href="#">
+            <button class="lien_carte marg-left" type="button">Découvrir la carte</button>
+        </a>
+        <!--bouton-->
     </section>
 
 
     <section id="prendre_rdv">
-        <p class="presentation middle">Prendre rendez-vous</p>
+        <p class="lancement middle gris">Prendre rendez-vous</p>
         <h3 class="middle">Contactez-nous <br> pour réserver au restaurant</h3>
         <div id="fiche_de_contact">
             <form id="formulaire" method="post" action="form.php">
@@ -135,7 +133,7 @@
                     <div>
                         <label for="nom">Nom</label><br>
                         <input type="text" id="nom" name="nom" placeholder="DRABCZYNSKI" minlength="2" maxlength="30"
-                            requiared>
+                            required>
                     </div>
                     <div>
                         <label for="prenom">Prénom</label><br>
@@ -164,11 +162,13 @@
         </div>
     </section>
     <footer>
-        <section>
-            <h1>Jadoo</h1>
-            <p class="sous_menu">Un voyage gastronomique entre le Japon et la France</p>
-        </section>
-        <section>
+        <div>
+        <div id="logo">
+            <img id="img-logo" src="img/logo_jadoo_1.svg" height="30px" alt="logo1">
+            <img id="text-logo" src="img/logo_jadoo_2.svg" height="30px" alt="logo2">
+        </div>
+            <p class="gris">Un voyage gastronomique entre<br>le Japon et la France</p>
+        </div>
             <a href="">Restaurant</a>
             <a href="" class="sous_menu">Nouveautés</a>
             <a href="" class="sous_menu">Découvrir</a>
