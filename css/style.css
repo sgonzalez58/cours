@@ -28,11 +28,13 @@ header{
     justify-content: space-between;
 }
 
-#img-logo{
-    margin :20px auto 15px;
+#logo img{
+    margin : 20px 15px 15px 0;
+    height: 30px;
 }
-#text-logo{
-    margin : 20px 15px 15px;
+
+.img-logo:hover{
+    animation: secouer 1s linear ;
 }
 
 nav ul{
@@ -123,11 +125,13 @@ h2{
     text-shadow: 0 0 2px white;
     background-color: rgb(218, 163, 11);
     color : white;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 
 .lien_carte:hover{
-    padding : 3px 22px;
-    font-size: 19px;    
+    transform-origin: 50% 50%;
+    transform: scale(1.1);   
     background-color: rgb(189, 141, 8);
 }
 
