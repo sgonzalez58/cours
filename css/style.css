@@ -124,12 +124,22 @@ h2{
     background-color: rgb(218, 163, 11);
     color : white;
 }
+
+.lien_carte:hover{
+    padding : 3px 22px;
+    font-size: 19px;    
+    background-color: rgb(189, 141, 8);
+}
+
 #nouveautes{
     height:1400px;
+    background-image: url("../img/decor_1.svg");
+    background-position: top right 30px;
+    background-repeat: no-repeat;
 }
 #nouveautes p{
     font-size: 18px;
-    margin-top: 110px;
+    padding-top: 100px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -150,16 +160,19 @@ h3,h4{
 
 #plats{
     display: flex;
-    justify-content: space-evenly;
     margin: 40px auto;
     max-width: 950px;
+    background-image: url(../img/decoration_filet.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding : 0 10px;
 }
 #plats figure{
     border-radius: 20px;
-    box-shadow: 0 0 5px 15px rgb(243, 243, 243);
+    box-shadow: 0 0 30px -5px rgb(228, 228, 228);
     margin: 20px;
     overflow: hidden;    
-    background-color: rgb(241, 241, 241);
+    background-color: white;
 }
 #plats img{
     width : 280px;
@@ -172,16 +185,18 @@ figcaption{
 }
 #maki{    
     display: flex;
-    justify-content: space-evenly;
     margin: 110px auto;
-    max-width: 1050px;
     overflow: visible;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#maki figure{
-    width:25%;
-    margin : 1px;
+#maki figure{  
+    border-radius: 20px;
+    padding : 20px 40px;
+    margin :0;
 }
+
 #maki figcaption span{
     color:rgb(5, 5, 37);
     font-weight: bold;
@@ -189,7 +204,10 @@ figcaption{
 }
 
 #maki figure:hover{
-    box-shadow: 0 0 10px 20px rgb(224, 224, 255);
+    box-shadow: 0 0 30px -5px rgb(228, 228, 228);
+    background-image: url("../img/decoration_rose.svg");
+    background-position: bottom left;
+    background-repeat: no-repeat;
 }
 
 
