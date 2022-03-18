@@ -2,8 +2,9 @@
 <html lang="fr">
 
 <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <title>Jadoo : un voyage culinaire gourmet et gourmand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
 </head>
@@ -15,20 +16,27 @@
             <img src="img/logo_jadoo_2.svg" alt="logo2">
         </div>
         <nav>
+            <div class="menu">
+            <label for="mobile">
+                <img src="img/burger_icon.svg" alt="menu portable">
+            </label>
+            <input type="checkbox" id="mobile" role="button">
             <ul>
                 <li><a href="#">Les Nouveautés</a></li>
                 <li><a href="#">Découvrir</a></li>
                 <li><a href="#">Commander</a></li>
                 <li><a href="#">Contactez-nous</a></li>
             </ul>
+            </div>
         </nav>
+        <a href="#">Contact</a>
     </header>
     <!--corps-->
 
     <section id="partie_presentation" class="left-pad">
-        <p class="slogan saumon">Un voyage culinaire gourmet et gourmand.</p>
+        <p class="slogan saumon">Un voyage culinaire gourmet et gourmand</p>
 
-        <h2>Bienvenue <br> au restaurant <br><span class="souligne">Jadoo &emsp;&emsp;</span></h2>
+        <h2>Bienvenue <br> au restaurant <br><span class="souligne">Jadoo</span></h2>
 
         <p class="presentation gris">Jadoo vous accueille dans son ambiance zen et épurée, idéale pour découvrir ou
             redécouvrir
@@ -61,22 +69,22 @@
         <div id="maki">
             <figure>
                 <img src="img/maki_1.png" alt="maki california tobiko">
-                <figcaption><span>California Tobiko</span><br>Saumon, thon,<br>mayonnaise</figcaption>
+                <figcaption><span>California Tobiko</span>Saumon, thon, mayonnaise</figcaption>
                 <img class="decoration_maki" src="img/decoration_rose.svg" alt="decoration rose">
             </figure>
             <figure>
                 <img src="img/maki_2.png" alt="maki california rolls">
-                <figcaption><span>California Rolls</span><br>Saumon, avocat et<br>mayonnaise</figcaption>
+                <figcaption><span>California Rolls</span>Saumon, avocat et mayonnaise</figcaption>
                 <img class="decoration_maki" src="img/decoration_rose.svg" alt="decoration rose">
             </figure>
             <figure>
                 <img src="img/maki_3.png" alt="maki ebi">
-                <figcaption><span>Ebi</span><br>Crevette, avocat,<br>menthe, coriandre</figcaption>
+                <figcaption><span>Ebi</span>Crevette, avocat, menthe, coriandre</figcaption>
                 <img class="decoration_maki" src="img/decoration_rose.svg" alt="decoration rose">
             </figure>
             <figure>
                 <img src="img/maki_4.png" alt="maki ikura rolls">
-                <figcaption><span>Ikura Rolls</span><br>Oeufs de saumon<br>&emsp;</figcaption>
+                <figcaption><span>Ikura Rolls</span>Oeufs de saumon</figcaption>
                 <img class="decoration_maki" src="img/decoration_rose.svg" alt="decoration rose">
             </figure>
         </div>
@@ -162,7 +170,6 @@
                 </div>
             </form>
             <img id="photo_formulaire" src="img/illustration_formulaire.jpg" alt="Plat de sushi appétisant">
-
         </div>
     </section>
     <footer class="middle">
