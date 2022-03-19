@@ -705,18 +705,25 @@ table td{
 
     #maki figure{
         padding : 0;
-        
+        text-align : left;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
     }
 
     #maki figure>img{
         width: 100px;
     }
 
-    #maki figure span{
-        line-height: 1em;
+    #maki figure figcaption{
+        width: 200px;
     }
 
-    #maki figure > *{
-        display: inline-block;
+    .decoration_maki{
+        display:none;
+    }
+
+    #maki figure span{
+        line-height: 1em;
     }
 }
