@@ -117,12 +117,11 @@ nav ul::after{
 
 #partie_presentation{
     background-image: url("../img/illustration_principale.jpg");
-    height:800px;
     background-size: 150%;
     background-position: center 40%;
     background-repeat: no-repeat;
     background-origin: border-box;
-    padding-top: 15px;
+    padding: 100px 8%;
 }
 h1{
     font-weight: bold;
@@ -133,7 +132,6 @@ h1{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.2em;
-    padding-top: 85px;
 }
 .saumon{
     color:salmon;
@@ -171,6 +169,7 @@ h2{
 }
 
 .lien_carte{
+    position: relative;
     border : 1px solid rgb(218, 163, 11);
     border-radius: 10px;
     font-size: 18px;
@@ -182,6 +181,7 @@ h2{
     color : white;
     transition-property: all;
     transition-duration: 0.5s;
+    z-index: 1;
 }
 
 .lien_carte:hover{
@@ -191,14 +191,13 @@ h2{
 }
 
 #nouveautes{
-    height:1400px;
+    padding : 80px 0;
     background-image: url("../img/decor_1.svg");
-    background-position: top right 30px;
+    background-position: top 30px right 30px;
     background-repeat: no-repeat;
 }
 #nouveautes p{
     font-size: 18px;
-    padding-top: 100px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -208,18 +207,23 @@ h3,h4{
     font-size: 3em;
     color:rgb(5, 5, 37);
     margin:0;
+    opacity: 0.99;
 }
 
 #plats{
     display: flex;
     margin: 40px auto;
-    max-width: 950px;
-    background-image: url(../img/decoration_filet.svg);
-    background-position: center right;
-    background-repeat: no-repeat;
+    flex-wrap: wrap;
     justify-content: center;
-    padding : 0 10px;
+    padding : 0 50px;
 }
+
+#plats figure:last-child{    
+    background-image: url(../img/decoration_filet.svg);
+    background-position: closest-side;
+    background-repeat: no-repeat;
+}
+
 #plats figure{
     border-radius: 20px;
     box-shadow: 0 0 30px -5px rgb(228, 228, 228);
@@ -286,11 +290,7 @@ h3,h4{
 }
 
 #chef{
-    height:2800px;
-    background-image: url("../img/illustration_chef.jpg"), url("../img/illustration_commander.jpg");
-    background-size: auto 1600px, auto 1200px;
-    background-repeat: no-repeat, no-repeat;
-    background-position: top center, bottom center;
+    height:auto;
     overflow: visible;
 }
 
@@ -299,11 +299,13 @@ h3,h4{
 }
 
 #video_presentation{
-    padding : 120px 0;
+    padding : 180px 0;
     width:fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: 1;
 }
 
 #chef video{    
@@ -323,21 +325,48 @@ h3,h4{
     filter:sepia(30%);
 }
 
+#conteneur-cuisinier{
+    width: 100%;
+    height: 2800px;
+    position : absolute;
+}
+#cuisinier{
+    position: relative;
+    right: 50%;
+    height: 1600px;
+}
+
+#plat-commande{
+    position: relative;
+    height : 1100px;
+    margin-top: -5px;
+}
+
 #chef h2{
+    padding-top: 500px;
     width:600px;
+    opacity: 0.99;
 }
 
 #histoire{
-    width: 400px;
+    width: 450px;
     line-height: 2em;
     color: white;
     font-family: "poppins";
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     margin-left: 8%;
+    opacity: 0.99;
+}
+
+#flot{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .float_left{
-    float : left;
+    position: relative;
+    opacity: 0.99;
+    margin-right: -5px;
 }
 
 .lancement{
@@ -346,23 +375,29 @@ h3,h4{
     font-weight: bold;
     clear:both;
     padding-top: 120px;
+    opacity: 0.99;
 }
 
 .logo{
-    height: 70px;
-    padding-right: 30px;
+    width: 60px;
+    padding : 30px 20px;
+    padding-left: 0;
+    opacity: 0.99;
 }
 
 #commandes_idees{
     display: flex;
-    width: 500px;
+    width: 400px;
     flex-wrap: wrap;
     padding : 40px 0;
     align-items: center;
+    opacity: 0.99;
 }
 
 #commandes_idees a{
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #commandes_idees p{
@@ -455,7 +490,7 @@ input[type="submit"]:hover{
 
 #identite > div{
     padding: 10px;
-    width : 50%;
+    width : 100%;
 }
 
 div{
@@ -488,6 +523,7 @@ footer p {
     flex-flow: column;
     text-align: left;
     padding : 0 40px;
+    order : 1;
 }
 
 #description img{
@@ -499,35 +535,41 @@ footer p {
     padding : 10px;
 }
 
-table{
-    empty-cells: hide;
-    text-align: left;
+#lien_menu{
+    order : 2;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-table a{
+#premiers_liens, #seconds_liens{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding : 0 30px;
+}
+
+#premiers_liens > a, #seconds_liens > a{    
     text-transform: none;    
     color :rgb(133, 112, 223);
+    padding-bottom: 10px;
 }
 
-table a:hover{
+#premiers_liens > a:hover, #seconds_liens > a:hover{
     text-decoration: underline;
 }
 
-table th{
+h6{
     color: black;
-    padding: 0 40px 20px 0;
+    margin : 0;
     font-size: 22px;
-}
-
-table td{
-    padding : 5px 0;
+    padding-bottom: 20px;
 }
 
 #appli_fin{
     width : 300px;
     text-align: left;
     padding: 10px 20px;
-    
+    order : 3 ;
 }
 
 #appli_fin figure{
@@ -629,12 +671,12 @@ table td{
 
 @media screen and (max-width : 779px){
     #partie_presentation{
-        height: 500px;
+        height: auto;
         text-align: center;
-        padding-left: 0;
+        padding: 50px 0;
     }
     .slogan{
-        padding-top: 20px;
+        padding-top: 0;
         font-size: 0.9em;
     }
 
@@ -667,10 +709,12 @@ table td{
     
     #nouveautes{
         background: none;
+        height: auto;
+        padding : 50px 0;
     }
 
     #nouveautes > p{
-        padding-top: 35px;
+        padding-top: 0;
         margin: 5px;
         font-size: 1em;
     }
@@ -679,12 +723,62 @@ table td{
         font-size: 1.5em;
     }
 
-    #plats figure{
-        display: none;
+    #plats figure:first-child{  
+        order : 1;
+        animation : defilement 18s linear 0s infinite forwards;
     }
 
-    #plats figure:first-child{
-        display: inline-block;
+    #plats figure:nth-child(2){   
+        position : absolute;
+        visibility: hidden;
+        order : 2;
+        animation : defilement 18s linear 6s infinite forwards;
+    }
+
+    #plats figure:nth-child(3){   
+        position : absolute;
+        visibility: hidden;
+        order : 2;
+        animation : defilement 18s linear 12s infinite forwards;
+    }
+    @keyframes defilement {
+    from{
+        visibility: visible;
+        transform: translateX(50%);
+        opacity: 0%;
+        order : 1;
+    }
+
+    2%{
+        visibility: visible;
+        transform: translate(0);
+        opacity: 100%;
+        order : 1;
+    }
+
+    30%{
+        visibility: visible;
+        transform: translate(0);
+        opacity:100%;
+        order : 1;
+    }
+
+    32%{
+        visibility: visible;
+        transform: translateX(-50%);        
+        opacity: 0%;
+        order : 1;
+    }
+    33%{
+        transform: translateX(-50%);
+        visibility: hidden;
+        order : 2;
+    }
+    to{
+        transform: translateX(50%);  
+        visibility: hidden;
+        order : 2;
+    }
     }
 
     #plats{
@@ -698,9 +792,9 @@ table td{
     }
 
     #maki{
-        margin : 80px 20px 30px;
+        margin : 50px 20px 30px;
         flex-flow: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     #maki figure{
@@ -725,5 +819,193 @@ table td{
 
     #maki figure span{
         line-height: 1em;
+    }
+
+    #chef{
+        background-position: left top 10%, left bottom;
+        background-size: contain, contain;
+        height: auto;
+        padding : 30px 0;
+        text-align: center;
+    }
+
+    #chef #histoire, #plat-commande, #chef h2{
+        display: none;
+    }
+    #video_presentation{
+        padding : 0;
+        margin: 0;
+        position: relative;
+        width: 100%;
+    }
+
+    #video_presentation > video{
+        border-radius: 0;
+        width: 100%;
+    }
+
+    #play{
+        width: 20%;
+        background: none;
+        filter: brightness(300);
+    }
+
+    #conteneur-cuisinier{
+        position: relative;
+        height: auto;
+        margin-top: -5px;
+    }
+
+    #cuisinier{
+        width: 100%;
+        height: auto;
+        right: 0;
+    }
+
+    #flot{
+        flex-wrap: wrap;
+        margin-top: -5px;
+    }
+
+    .float_left{
+        width: 100%;
+    }
+
+    .lancement{
+        font-size: 1em;
+        padding-top: 30px;
+        margin: 10px 0;
+    }
+
+    #chef > h4{
+        margin-left: 0;
+        font-size: 2em;
+    }
+
+    #chef > h4 > span{
+        font-size: 1.5em;
+    }
+
+    #commandes_idees{
+        margin: 20px auto;
+        padding : 20px 0;
+    }
+
+    #commandes_idees > a{
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    #commandes_idees .logo{
+        padding-left: 30px;
+    }
+
+    #commandes_idees p {
+        width: 60vw;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    #chef > a > button{
+        text-align: center ;
+        margin-left: 0;
+    }
+
+    #prendre_rdv > h3{
+        display: none;
+    }
+
+    #prendre_rdv > h3:first-of-type{
+        display: block;
+        font-size: 2em;
+    }
+
+    #fiche_de_contact{
+        margin : 0;
+        display: block;
+        border-radius: 0;
+        box-shadow: none;
+        height: auto;
+        padding : 30px 0;
+    }
+
+    #fiche_de_contact > img{
+        display: none;
+    }
+
+    #fiche_de_contact > #formulaire{
+        padding : 0 20px;
+        width: 100%;
+    }
+    #fiche_de_contact > #formulaire > h5{
+        display: none;
+    }
+
+    #fiche_de_contact > #formulaire > p{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #fiche_de_contact > #formulaire > #identite{
+        flex-flow: column;
+    }
+
+    #fiche_de_contact > #formulaire > #identite > div{
+        width: auto;
+    }
+
+    footer{
+        padding-top: 40px;
+    }
+
+    #boite_final {        
+        text-align: center;
+    }
+
+    #boite_final > #description{
+        order : 4;
+        background-color: white;
+        background-position: top left;
+        width: 100%;
+        padding: 30px 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #boite_final > #description > div{
+        transform: scale(0.75);
+    }
+
+    #boite_final > #lien_menu{
+        font-weight: bold;
+        width: 100%;
+        justify-content: center;
+    }
+
+    table th{
+        padding : 0 50px 10px;
+    }
+
+    table td{
+        padding : 0 20px 10px 50px;
+    }
+
+    #boite_final > #appli_fin{
+        padding : 30px 0;
+        text-align: center;
+        font-weight: bold;
+        width: auto;
+    }
+
+    #boite_final > #appli_fin button{
+        margin : 10px 20px;
+        transform: scale(1.2);
+    }
+
+
+    #fin{
+        display: none;
     }
 }
