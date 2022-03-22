@@ -117,7 +117,7 @@ nav ul::after{
 
 #partie_presentation{
     background-image: url("../img/illustration_principale.jpg");
-    background-size: 150%;
+    background-size: auto 100%;
     background-position: center 40%;
     background-repeat: no-repeat;
     background-origin: border-box;
@@ -218,11 +218,6 @@ h3,h4{
     padding : 0 50px;
 }
 
-#plats figure:last-child{    
-    background-image: url(../img/decoration_filet.svg);
-    background-position: closest-side;
-    background-repeat: no-repeat;
-}
 
 #plats figure{
     border-radius: 20px;
@@ -231,6 +226,14 @@ h3,h4{
     overflow: hidden;    
     background-color: white;
 }
+
+#deco_filet{    
+    padding-right: 30px;
+    background-image: url(../img/decoration_filet.svg);
+    background-repeat: no-repeat;
+    background-position: right ;
+}
+
 #plats img{
     width : 280px;
 }
@@ -325,21 +328,41 @@ h3,h4{
     filter:sepia(30%);
 }
 
+#conteneur_image{
+    position :absolute;
+    height: 2700px;
+    width: 100%;
+}
+
 #conteneur-cuisinier{
     width: 100%;
-    height: 2800px;
-    position : absolute;
+    height: 1600px;
+    position : relative;
+    background-image: url(../img/illustration_chef.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 #cuisinier{
+    display: none;
     position: relative;
     right: 50%;
     height: 1600px;
 }
 
+#conteneur-plat{
+    width: 100%;
+    height : 1100px;
+    position : relative;
+    background-image: url(../img/illustration_commander.jpg);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 #plat-commande{
     position: relative;
     height : 1100px;
-    margin-top: -5px;
 }
 
 #chef h2{
@@ -408,6 +431,11 @@ h3,h4{
 #commandes_idees span{
     color:rgb(5, 5, 37);
     font-weight: bold;
+}
+
+#livraison{
+    display: flex;
+    align-items: center;
 }
 
 h5{
@@ -499,6 +527,14 @@ div{
 
 #message, #mail, #identite{
     width:100%;
+}
+
+#image_contact{
+    width: 50%;
+}
+
+#image_contact img{
+    height : 100%;
 }
 
 footer{
@@ -663,10 +699,46 @@ h6{
         display: inline-block;
         padding-right: 7%;
     }
-
-    #partie_presentation{
-        background-size: auto 100%;
+    footer{
+        padding-top: 40px;
     }
+
+    #boite_final {        
+        text-align: center;
+    }
+
+    #boite_final > #description{
+        order : 4;
+        background-color: white;
+        background-position: top left;
+        width: 100%;
+        padding: 30px 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #boite_final > #description > div{
+        transform: scale(0.75);
+    }
+
+    #boite_final > #lien_menu{
+        font-weight: bold;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #boite_final > #appli_fin{
+        padding : 30px 0;
+        text-align: center;
+        font-weight: bold;
+        width: auto;
+    }
+
+    #boite_final > #appli_fin button{
+        margin : 10px 20px;
+        transform: scale(1.2);
+    }
+
 }
 
 @media screen and (max-width : 779px){
@@ -735,12 +807,18 @@ h6{
         animation : defilement 18s linear 6s infinite forwards;
     }
 
-    #plats figure:nth-child(3){   
-        position : absolute;
-        visibility: hidden;
-        order : 2;
-        animation : defilement 18s linear 12s infinite forwards;
+    #plats #deco_filet{   
+        background: none;
+        padding-left: 0;
     }
+
+    #plats #deco_filet figure{
+    position : absolute;
+    visibility: hidden;
+    order : 2;
+    animation : defilement 18s linear 12s infinite forwards;
+    }
+
     @keyframes defilement {
     from{
         visibility: visible;
@@ -850,16 +928,25 @@ h6{
         filter: brightness(300);
     }
 
+    #conteneur_image{
+        position : relative;
+        height: auto;
+    }
+
     #conteneur-cuisinier{
-        position: relative;
         height: auto;
         margin-top: -5px;
     }
 
     #cuisinier{
+        display: block;
         width: 100%;
         height: auto;
         right: 0;
+    }
+
+    #conteneur-plat{
+        display: none;
     }
 
     #flot{
@@ -908,10 +995,12 @@ h6{
         text-align: left;
     }
 
-    #chef > a > button{
-        text-align: center ;
-        margin-left: 0;
+    
+
+    #partie_presentation{
+        background-size: auto 100%;
     }
+    
 
     #prendre_rdv > h3{
         display: none;
@@ -931,7 +1020,7 @@ h6{
         padding : 30px 0;
     }
 
-    #fiche_de_contact > img{
+    #fiche_de_contact > #image_contact{
         display: none;
     }
 
@@ -956,56 +1045,31 @@ h6{
         width: auto;
     }
 
-    footer{
-        padding-top: 40px;
-    }
 
-    #boite_final {        
-        text-align: center;
+    #chef > a > button{
+        text-align: center ;
+        margin-left: 0;
     }
-
-    #boite_final > #description{
-        order : 4;
-        background-color: white;
-        background-position: top left;
-        width: 100%;
-        padding: 30px 0;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    #boite_final > #description > div{
-        transform: scale(0.75);
-    }
-
-    #boite_final > #lien_menu{
-        font-weight: bold;
-        width: 100%;
-        justify-content: center;
-    }
-
-    table th{
-        padding : 0 50px 10px;
-    }
-
-    table td{
-        padding : 0 20px 10px 50px;
-    }
-
-    #boite_final > #appli_fin{
-        padding : 30px 0;
-        text-align: center;
-        font-weight: bold;
-        width: auto;
-    }
-
-    #boite_final > #appli_fin button{
-        margin : 10px 20px;
-        transform: scale(1.2);
-    }
-
 
     #fin{
         display: none;
+    }
+}
+
+@media screen and (min-width : 1100px){
+    #conteneur-plat{
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width : 1340px){
+    #partie_presentation{
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width : 2390px){
+    #conteneur-cuisinier{
+        background-size: cover;
     }
 }

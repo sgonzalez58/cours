@@ -61,10 +61,12 @@
                 <img src="img/plat_2.png" alt="nouilles japonaises">
                 <figcaption>Nouilles japonaises<br>chaudes à base de farine<br>de blé "Udon"</figcaption>
             </figure>
-            <figure>
-                <img src="img/plat_3.png" alt="Echine de porc">
-                <figcaption>Echine de porc panée à la<br>japonaise "Tonkatsu-<br>Teishoku</figcaption>
-            </figure>
+            <div id="deco_filet">
+                <figure>
+                    <img src="img/plat_3.png" alt="Echine de porc">
+                    <figcaption>Echine de porc panée à la<br>japonaise "Tonkatsu-<br>Teishoku</figcaption>
+                </figure>
+            </div>
         </div>
         <div id="maki">
             <figure>
@@ -100,9 +102,11 @@
             </video>
             <img id="play" src="img/button_play.svg" alt="bouton play">
         </div>
-        <div id="conteneur-cuisinier">
-            <img id="cuisinier" src="img/illustration_chef.jpg" alt="cuisinier">
-            <img id="plat-commande" src="img/illustration_commander.jpg" alt="image commande">
+        <div id="conteneur_image">
+            <div id="conteneur-cuisinier">
+                <img id="cuisinier" src="img/illustration_chef.jpg" alt="cuisinier">
+            </div>
+            <div id="conteneur-plat"></div>
         </div>
         <h2 class="marg-left"><span class="souligne">Un voyage</span> gastronomique entre le Japon et la France...</h2>
         <p id="histoire" class="marg-left">Passé par des maisons étoilées en France, le cuisinier japonais s'est forgé
@@ -113,9 +117,9 @@
             Paris
         </p>
         <div id="flot">
-        <img class="float_left" src="./img/wrapper_illustration_1.jpg" alt="baguettes">
-        <img class="float_left" src="./img/wrapper_illustration_2.jpg" alt="salle à manger">
-    </div>
+            <img class="float_left" src="./img/wrapper_illustration_1.jpg" alt="baguettes">
+            <img class="float_left" src="./img/wrapper_illustration_2.jpg" alt="salle à manger">
+        </div>
         <p class="lancement marg-left gris">Rapide et pratique</p>
         <h4 class="marg-left"><span class="saumon">Commandez</span> <br> sur le site Jadoo</h4>
         <div class="marg-left" id="commandes_idees">
@@ -129,8 +133,10 @@
                 <p><span>Jadoo.fr</span><br>Ou commandez en ligne sur le site Officiel de Jadoo</p>
 
             </a>
-            <img class="logo" src="./img/logo_transport.png" alt="logo transport">
-            <p><span>Livraison ultra rapide</span><br>Soyez livrez en 20 minutes maximum</p>
+            <div id="livraison">
+                <img class="logo" src="./img/logo_transport.png" alt="logo transport">
+                <p><span>Livraison ultra rapide</span><br>Soyez livrez en 20 minutes maximum</p>
+            </div>
         </div>
         <a href="#">
             <button class="lien_carte marg-left" type="button">Découvrir la carte</button>
@@ -175,7 +181,9 @@
                     </input>
                 </div>
             </form>
-            <img id="photo_formulaire" src="img/illustration_formulaire.jpg" alt="Plat de sushi appétisant">
+            <div id="image_contact">
+                <img id="photo_formulaire" src="img/illustration_formulaire.jpg" alt="Plat de sushi appétisant">
+            </div>
         </div>
     </section>
     <footer class="middle">
