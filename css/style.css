@@ -72,6 +72,11 @@ header{
 
 header > #contact{
     display: none;
+    order : 3;
+    padding-right: 7%;
+    font-size: 20px;
+    font-weight: bold;
+    color : black;
 }
 
 nav ul{
@@ -659,6 +664,7 @@ h6{
         padding: 20px;
         align-items: center;
     }
+    
 
     .menu li{
         background-color: aliceblue;
@@ -666,6 +672,14 @@ h6{
         font-size: 20px;
         padding:10px;
         border-width: 10px;
+    }
+
+    .menu li:last-child{
+        display: none;
+    }
+
+    header > #contact{
+        display: block;
     }
 
     .menu label{
@@ -679,6 +693,7 @@ h6{
         width: 100%;
         top : 13px;
         left:0;
+        z-index: 1;
     }
 
     nav{
@@ -686,19 +701,22 @@ h6{
         margin : 0 10px;
     }
 
-    header>#logo{
+    header #logo{
         order : 2;
     }
 
-    header>#logo img{
+    header #logo img{
         margin-right : 5px;
     }
 
-    header > a{
+    header > a:first-child{
         order : 3;
-        display: inline-block;
-        padding-right: 7%;
     }
+
+    header > a{
+        z-index: 2;
+    }
+
     footer{
         padding-top: 40px;
     }
@@ -737,6 +755,10 @@ h6{
     #boite_final > #appli_fin button{
         margin : 10px 20px;
         transform: scale(1.2);
+    }
+
+    #fin{
+        display: none;
     }
 
 }
@@ -1049,10 +1071,6 @@ h6{
     #chef > a > button{
         text-align: center ;
         margin-left: 0;
-    }
-
-    #fin{
-        display: none;
     }
 }
 
