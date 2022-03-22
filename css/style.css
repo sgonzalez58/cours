@@ -70,7 +70,7 @@ header{
     }
 }
 
-header > a{
+header > #contact{
     display: none;
 }
 
