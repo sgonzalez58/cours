@@ -227,9 +227,14 @@ h3,h4{
 #plats figure{
     border-radius: 20px;
     box-shadow: 0 0 30px -5px rgb(228, 228, 228);
-    margin: 20px;
     overflow: hidden;    
     background-color: white;
+}
+
+#plats #dummy{
+    display: none;
+    visibility: hidden;
+    order:1;
 }
 
 #deco_filet{    
@@ -817,10 +822,12 @@ h6{
         font-size: 1.5em;
     }
 
-    #plats figure:first-child{  
-        order : 1;
+    #plats>figure:first-child{         
+        position : absolute;
+        order : 2;
         animation : defilement 18s linear 0s infinite forwards;
     }
+
 
     #plats figure:nth-child(2){   
         position : absolute;
@@ -831,14 +838,15 @@ h6{
 
     #plats #deco_filet{   
         background: none;
-        padding-left: 0;
+        padding-right: 0;
+        order : 2;
+        position : absolute;
+        visibility: hidden;
+        animation : defilement 18s linear 12s infinite forwards;
     }
 
-    #plats #deco_filet figure{
-    position : absolute;
-    visibility: hidden;
-    order : 2;
-    animation : defilement 18s linear 12s infinite forwards;
+    #plats > #dummy{
+        display: block;
     }
 
     @keyframes defilement {
@@ -872,12 +880,12 @@ h6{
     33%{
         transform: translateX(-50%);
         visibility: hidden;
-        order : 2;
+        order : 7;
     }
     to{
         transform: translateX(50%);  
         visibility: hidden;
-        order : 2;
+        order : 7;
     }
     }
 
@@ -1071,6 +1079,49 @@ h6{
     #chef > a > button{
         text-align: center ;
         margin-left: 0;
+    }
+}
+
+@media screen and (max-width : 385px){
+    header #logo img{
+        height:15px;
+    }
+    header #contact{
+        font-size: 14px;
+    }
+
+    header .menu label{
+        position:relative;
+        top:-5px;
+    }
+
+    header .menu li{
+        font-size: 16px;
+    }
+
+    #partie_presentation h2{
+        font-size:2em;
+    }
+
+    #plats >* img{
+        width: 100%;
+    }    
+
+    #maki figure img{
+        width : 45%;
+    }
+
+    #maki figure figcaption{
+        width : 100%;
+    }
+
+    #chef h4{
+        font-size: 1em;
+    }
+
+    #commandes_idees .logo{
+        width:40px;
+        padding-left:10px;
     }
 }
 
