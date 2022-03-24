@@ -122,7 +122,8 @@ nav ul::after{
 
 #partie_presentation{
     background-image: url("../img/illustration_principale.jpg");
-    background-size: auto 100%;
+
+    background-size: cover;
     background-position: center 40%;
     background-repeat: no-repeat;
     background-origin: border-box;
@@ -185,13 +186,13 @@ h2{
     background-color: rgb(218, 163, 11);
     color : white;
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     z-index: 1;
 }
 
 .lien_carte:hover{
     transform-origin: 50% 50%;
-    transform: scale(1.1);   
+    transform: scale(1.2);   
     background-color: rgb(189, 141, 8);
 }
 
@@ -349,7 +350,7 @@ h3,h4{
     height: 1600px;
     position : relative;
     background-image: url(../img/illustration_chef.jpg);
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -366,7 +367,7 @@ h3,h4{
     height : 1100px;
     position : relative;
     background-image: url(../img/illustration_commander.jpg);
-    background-size: auto 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -513,10 +514,12 @@ input[type="submit"]{
     background-repeat: no-repeat;
     background-position: center left 15px;
     font-size: 18px;
-    width:auto
+    width:auto;
+    transition-duration: 0.2s;
 }
 
 input[type="submit"]:hover{
+    transform: scale(1.2);
     background-color: rgb(85, 176, 250);
 }
 
@@ -647,7 +650,7 @@ h6{
 }
 
 .lien_fin_page:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #fin{
@@ -655,7 +658,7 @@ h6{
     font-size: 15px;
 }
 
-@media screen and (max-width : 979px){
+@media screen and (max-width : 1024px){
 
     .menu ul{
         display:none;
@@ -768,7 +771,7 @@ h6{
 
 }
 
-@media screen and (max-width : 779px){
+@media screen and (max-width : 656px){
     #partie_presentation{
         height: auto;
         text-align: center;
@@ -1122,23 +1125,5 @@ h6{
     #commandes_idees .logo{
         width:40px;
         padding-left:10px;
-    }
-}
-
-@media screen and (min-width : 1100px){
-    #conteneur-plat{
-        background-size: cover;
-    }
-}
-
-@media screen and (min-width : 1340px){
-    #partie_presentation{
-        background-size: cover;
-    }
-}
-
-@media screen and (min-width : 2390px){
-    #conteneur-cuisinier{
-        background-size: cover;
     }
 }
