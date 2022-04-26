@@ -120,6 +120,26 @@ nav ul::after{
     background-color: white;
 }
 
+#overlay{
+    display : none;
+    justify-content: center;
+    align-items: center;
+    position : fixed;
+    top : 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index:50;
+}
+
+#confirmation{
+    padding : 0 50px;
+    font-size: 30px;
+    background-color: grey;
+    border-radius: 10px;
+    border : 5px solid black;
+}
+
 #partie_presentation{
     background-image: url("../img/illustration_principale.jpg");
 
@@ -160,6 +180,7 @@ h2{
 .nom{
     font-family:"poppins";
 }
+
 .presentation{
     font-family: "poppins";
     width : 480px;
@@ -225,7 +246,7 @@ h3,h4{
 }
 
 
-#plats figure{
+#plats .carte > figure{
     border-radius: 20px;
     box-shadow: 0 0 30px -5px rgb(228, 228, 228);
     overflow: hidden;    
@@ -245,14 +266,15 @@ h3,h4{
     background-position: right ;
 }
 
-#plats img{
+#plats .carte img{
     width : 280px;
 }
-#plats figcaption{
+.carte figcaption{
     color: gray;
     font-size: 18px;
     line-height: 1.5;
     margin : 20px 0;
+    width : 280px;
 }
 #maki{  
     display: flex;
@@ -262,25 +284,25 @@ h3,h4{
     justify-content: center;
 }
 
-#maki figure{  
+#maki .carte figure{  
     border-radius: 20px;
     padding : 20px 40px;
     margin :0;
     position: relative;
 }
 
-#maki figure figcaption{
+#maki .carte figure figcaption{
     width : 150px;
 }
 
-#maki figcaption span{
+#maki .carte figcaption span{
     color:rgb(5, 5, 37);
     font-weight: bold;
     line-height: 4em;
     display: block;
 }
 
-#maki figure:hover{
+#maki .carte figure:hover{
     box-shadow: 0 0 30px -5px rgb(228, 228, 228);
     background-color: white;
 }
@@ -825,14 +847,14 @@ h6{
         font-size: 1.5em;
     }
 
-    #plats>figure:first-child{         
+    #plats>.carte:first-child{         
         position : absolute;
         order : 2;
         animation : defilement 18s linear 0s infinite forwards;
     }
 
 
-    #plats figure:nth-child(2){   
+    #plats .carte:nth-child(2){   
         position : absolute;
         visibility: hidden;
         order : 2;
@@ -848,7 +870,7 @@ h6{
         animation : defilement 18s linear 12s infinite forwards;
     }
 
-    #plats > #dummy{
+    #plats #dummy{
         display: block;
     }
 
